@@ -61,21 +61,22 @@ print(sum)
 i<-1
 while(i<4){
   i<- i+1
-  cat("*****","")
+  cat("*****","\n")
 }
 i<-1
 repeat{
   i<-i+1
-  if(i>10){
+  if(i>4){
     break
   }else{
-    print(i)
+    cat("*****","\n")
   }
 }
 
-
+data.frame()
 # 반복작업의 대상이 매트릭스나 데이터 프레임인 경우 사용
 test.3 <- matrix(c(1,3,2,7,9,11),nrow=2,ncol=3)
+test.3
 apply(test.3,1,mean)
 apply(test.3,2,mean)
 str(cars)
