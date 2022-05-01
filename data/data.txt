@@ -1,0 +1,6 @@
+name score1 score2 score3
+kim 100 100 100
+lee 99 99 99
+jung 100 100 100
+oh 99 99 99
+hwang 100 100 100
