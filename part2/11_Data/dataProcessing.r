@@ -13,7 +13,14 @@ gapminder[,c(1,4)]
 # 한국의 정보추출
 gapminder[gapminder["country"] == "Korea, Rep.", ]
 
+kor_info_with_filter <- filter(gapminder, country == "Korea, Rep.")
+kor_pop <- kor_info_with_filter[,5]
+sum(kor_pop)
+
+kor_info_with_filter_2000 <- filter(kor_info_with_filter, year > 2000)
+kor_info_with_filter_2000[, c(4:5)]
 # 한국의 인구 정보 추출 및 전체 인구 합 구하기
+
 kor_info <- gapminder[gapminder$country == "Korea, Rep.", ]
 kor_pop <- kor_info[, 5]
 sum(kor_pop)
@@ -30,6 +37,9 @@ summary(gapminder)
 table(gapminder[, 3])
 gapminder
 
+kor_2000 <- filter(gapminder, country == "Korea, Rep." & year > 2000)
+kor_2000[c(5:6)]
 # 한국의 데이터 중 2000년 이후의 인구와 1인당 국내총생산량 추출
 gapminder[gapminder$country == "Korea, Rep." & gapminder$year > 2000,
 c("pop", "gdpPercap")]
+
