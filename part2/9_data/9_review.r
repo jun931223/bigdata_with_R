@@ -9,6 +9,7 @@ list.test$num
 
 # 리스트에 벡터 포함가능
 list.test2 <- list(vect = vector.test, name = "벡터")
+list.test2$name
 list.test2$vect
 
 # 팩터는 정해진 범위 안의 문자를 활용하는 경우에 사용된다.
@@ -24,8 +25,8 @@ matrix.test
 # 백터를 열방향으로 묶어서 매트릭스 생성
 i <- c(1:5)
 j <- c(6:10)
-cbind(i,j)
-rbind(i,j)
+cbind(i,j) # column bind / first arguments -> first column
+rbind(i,j) # row bind  / first arguments -> first row
 
 # 데이터 프레임
 # 2차원인 테이블의 형태로 데이터를 표현하며 숫자, 문자 등 서로 다른 형태 데이터를 표현 가능
